@@ -4,7 +4,7 @@ const typeInput = document.getElementById('typeInput')
 const timer = document.getElementById('timer');
 
 const typeSound = new Audio("./audio/typing-sound.mp3");
-const wrongSound = new Audio("./audio/wrong.mp3");
+const incorrectSound = new Audio("./audio/wrong.mp3");
 const correctSound = new Audio("./audio/correct.mp3");
 
 
@@ -37,9 +37,9 @@ typeInput.addEventListener("input", () => {
         characterSpan.classList.remove('correct');
 
         //add wrong sound
-        wrongSound.volume = 0.3;
-        wrongSound.play();
-        wrongSound.currentTime = 0;
+        incorrectSound.volume = 0.3;
+        incorrectSound.play();
+        incorrectSound.currentTime = 0;
 
         correct = false;
       }
